@@ -18,6 +18,9 @@ class Finder(object):
     def __len__(self):
         return len(self.links)
 
+    def __iter__(self):
+        return self.links.__iter__()
+
     @staticmethod
     def parse_url(base_url):
         # used to extract the scheme, subdomain, and domain from the url
